@@ -47,7 +47,7 @@ var ChildItem = document.querySelector(".a");
 var inputSearch = document.getElementById("search");
 inputSearch.addEventListener("keyup", ()=>{
     var result = myData.filter((item)=>{
-        return item.toLowerCase().indexOf(inputSearch.value) >= 0;
+        return item.toLowerCase().indexOf(inputSearch.value.toLowerCase()) >= 0;
     })
     showData(result);
     if(inputSearch.value == "")  ShowResult.innerHTML = "";
